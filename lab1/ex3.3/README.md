@@ -28,3 +28,7 @@ docker run --name weather-thess -d ^
   -e CITY=Thessaloniki -e STATE=Central-Macedonia -e COUNTRY=gr ^
   weather-requester-c
 ```
+
+# **✅ Συμπεράσματα**
+Με αυτό το παράδειγμα είδαμε πώς:
+- Τα Environment Variables μπορούν να κάουν τον κώδικά μας πολύ δυναμικό. Δεν χρειάζεται να κάνουμε συνεχώς rebuild αν τις χρησιμοποιούμε σωστά.

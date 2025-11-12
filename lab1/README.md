@@ -16,7 +16,6 @@
 - **[Ex2.2](ex2.2)**: Εγκατάσταση και χρήση της **MongoDB**.
 - **[Ex2.3](ex2.3)**: Εγκατάσταση και χρήση της **MinIO**.
 - **[Ex2.4](ex2.4)**: Εγκατάσταση ενός **Jupiter Notebook**.
-- **[Ex2.5](ex2.5)**: Εγκατάσταση ενός **Minecraft Server**.
 - **[Ex3.1](ex3.1)**: Καιρός Αθήνας μέσω **Python** (Δημιουργία Image και Container)
 - **[Ex3.2](ex3.2)**: Καιρός Αθήνας μέσω **Java** (Δημιουργία Image και Container)
 - **[Ex3.3](ex3.3)**: Καιρός Αθήνας μέσω **C** (Δημιουργία Image και Container)
@@ -42,3 +41,26 @@
 Παράδοση στον Αρίσταρχο (1η Προαιρετική Εργασία):
 - Να ανεβάσετε ένα `.txt` αρχείο με το link για το DockerHub εντός ενός zip φακέλου.
 - Όνομα Αρχείου: `<Αριθμός Μητρώου>.zip` (Πχ. `e17065.zip`)
+
+## Extra Άσκηση (Εγκατάσταση ενός Minecraft Server)
+Για να κατεβάσετε και να εκκινήσετε έναν Minecraft Server εκτελέστε:
+```shell
+docker run --name my-minecraft ^
+  -d -p 25565:25565 ^
+  -e EULA=TRUE ^
+  -e VERSION=latest ^
+  -e DIFFICULTY=normal ^
+  -e MAX_PLAYERS=5 ^
+  -e MOTD="Καλώς ήρθατε στον Dockerized Server!" ^
+  -v ./minecraft_data:/data ^
+  itzg/minecraft-server
+```
+
+### Σύνδεση στο Minecraft Server
+Ανοίξτε το Minecraft και από το μενού Multiplayer, επιλέξτε Add Server.
+
+Συμπληρώστε:
+- Server Name: `My Docker Server`
+- Server Address: `localhost` (ή η IP του μηχανήματος αν παίζουν άλλοι στο LAN).
+
+Πατήστε **Join Server** και συνδεθείτε!

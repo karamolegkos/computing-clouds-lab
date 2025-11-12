@@ -53,17 +53,17 @@ FROM python:3.12-slim
 docker build -t weather-requester-python .
 
 # Spin up a container from the image
-docker run --name weather -d weather-requester-python
+docker run --name weather-python -d weather-requester-python
 
 # Check the logs
-docker logs -f weather
+docker logs -f weather-python
 ```
 
 ## Extra: Καλή πρακτική (API key)
 
 Προς το παρόν το API key είναι "σκληροκωδικομένο" μέσα στο αρχείο. Είναι καλύτερο να περνάμε κλειδιά / κωδικούς με την χρήση μεταβλητών περιβάλλοντος:
 ```shell
-docker run --name weather -d ^
+docker run --name weather-python -d ^
   -e API_KEY=dcff3a1b197264b4ba1fb5fe20a6ca4b ^
   weather-requester
 ```

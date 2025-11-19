@@ -20,7 +20,7 @@
 - **[Ex2](ex2)**: MySQL + Writer + Adminer (web UI)
 - **[Ex2.1](ex2.1)**: MySQL + Writer + Adminer (web UI) - ως daemon
 - **[Ex3](ex3)**: MinIO + script upload/download + Web Console
-- **[Ex4](ex4)**: MySQL + 2 Python Services
+- **[Ex4](ex4)**: MySQL + 2 Python Services + Adminer
 
 ## Προεραιτική Εργασία
 Στόχος: Να φτιάξετε ένα μικρό σύστημα με Docker Compose, όπου ένα δικό σας service (`writer`) τρέχει συνεχώς και:

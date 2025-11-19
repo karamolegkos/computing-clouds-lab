@@ -1,0 +1,39 @@
+services:
+
+  my-mysql:
+    image: mysql:8.0
+    container_name: my-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: testdb
+
+  creator:
+    build: ./creator
+    depends_on:
+      - my-mysql
+    environment:
+      DB_HOST: my-mysql
+      DB_USER: root
+      DB_PASSWORD: root
+      DB_NAME: testdb
+
+  watcher:
+    build: ./watcher
+    depends_on:
+      - my-mysql
+    environment:
+      DB_HOST: my-mysql
+      DB_USER: root
+      DB_PASSWORD: root
+      DB_NAME: testdb
+    volumes:
+      - ./data:/app/data
+
+  adminer:
+    image: adminer:latest
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - my-mysql

@@ -16,7 +16,9 @@
 
 ## Ασκήσεις
 - **[Ex1](ex1)**: MySQL + εφαρμογή Writer (inserts σε DB)
+- **[Ex1.1](ex1.1)**: MySQL + εφαρμογή Writer (inserts σε DB) - ως daemon
 - **[Ex2](ex2)**: MySQL + Writer + Adminer (web UI)
+- **[Ex2.1](ex2.1)**: MySQL + Writer + Adminer (web UI) - ως daemon
 - **[Ex3](ex3)**: MinIO + script upload/download + Web Console
 - **[Ex4](ex4)**: MySQL + 2 Python Services
 

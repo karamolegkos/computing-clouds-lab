@@ -1,0 +1,6 @@
+services:
+  python_app:
+    build: ./app
+    container_name: my_python_app
+    stdin_open: true   # keep STDIN open so input() works
+    tty: true          # allocate a pseudo-TTY
